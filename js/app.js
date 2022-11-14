@@ -9,6 +9,8 @@ $('.roompopup').magnificPopup({ type: 'image' });
 
 //End jquery Area
 
+// Start javaScript Area
+
 // Start Header
 // Start nav Bar
 function dropbtn(e) {
@@ -25,6 +27,7 @@ function dropfilter() {
     // getlinks = getdropdiv.getElementsByTagName('a');
     getlinks = document.querySelectorAll('.mydropdowns a');
     // console.log(getlinks);
+    // getlinks = Array.from(getlinks);
 
     for (var x = 0; x < getlinks.length; x++) {
         // linkvalue = getlinks[x].textContent ;
@@ -55,10 +58,10 @@ function* genfun() {
 }
 var getgen = genfun();
 
-var idx = getgen.next().value;
+var index = getgen.next().value;
 
 var getheader = document.querySelector('header');
-getheader.style.backgroundImage = `url("./assets/img/banner/banner/banner8.jpg")`;
+// getheader.style.backgroundImage = `url("./assets/img/banner/banner/banner8.jpg")`;
 
 function autoload() {
     // console.log(getgen.next().value);
@@ -69,14 +72,62 @@ setInterval(autoload, 2500);
 // end auto background 
 
 // End Header
-// Start Testimonial 
+// Start Testimonial Section
 const getcompanyname = document.querySelector('.companyname');
 const getrole = document.querySelector('.role');
 const gettestimonial = document.querySelector('.testimonial');
 
-const testimonialdatas = {
+const testimonialdatas = [{
+        name: "Rich Star Restaurant",
+        position: "Our Outlet",
+        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium quam ipsam nisi necessitatibus praesentium, quis magnam esse laboriosam omnis? Libero, molestiae. Ipsa inventore illo optio eligendi architecto? Quisquam, eum accusamus?"
+    },
+    {
+        name: "48 Sky Bar Cafe",
+        position: "Our Partner",
+        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium quam ipsam nisi necessitatibus praesentium, quis magnam esse laboriosam omnis? Libero, molestiae. Ipsa inventore illo optio eligendi architecto? Quisquam, eum accusamus?"
+    },
+    {
+        name: "52 Beach Hotel",
+        position: "Our Branch",
+        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium quam ipsam nisi necessitatibus praesentium, quis magnam esse laboriosam omnis? Libero, molestiae. Ipsa inventore illo optio eligendi architecto? Quisquam, eum accusamus?"
+    },
+    {
+        name: "Cool Land Swimming Pool",
+        position: "Our Client",
+        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium quam ipsam nisi necessitatibus praesentium, quis magnam esse laboriosam omnis? Libero, molestiae. Ipsa inventore illo optio eligendi architecto? Quisquam, eum accusamus?"
+    },
+    {
+        name: "Chaung Thar SPA",
+        position: "Our Bussiness",
+        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium quam ipsam nisi necessitatibus praesentium, quis magnam esse laboriosam omnis? Libero, molestiae. Ipsa inventore illo optio eligendi architecto? Quisquam, eum accusamus?"
+    },
+];
 
+let idx = 0;
+// console.log(testimonialdatas[idx]);
+// console.log(testimonialdatas[idx].name);
+// console.log(testimonialdatas[idx].position);
+// console.log(testimonialdatas[idx].text);
+
+function updatetestimonial() {
+
+    getcompanyname.textContent = testimonialdatas[idx].name;
+    getrole.textContent = testimonialdatas[idx].position;
+    gettestimonial.textContent = testimonialdatas[idx].text;
+
+    // const { name, position, text } = testimonialdatas[idx];
+    // console.log(name);
+    // console.log(position);
+    // console.log(text);
+
+    idx++;
+
+    if (idx > testimonialdatas.length - 1) {
+        idx = 0;
+    }
 }
-3 TM
+setInterval(updatetestimonial, 10000);
 
-// End Testimonial
+
+// End Testimonial Section

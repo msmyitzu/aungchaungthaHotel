@@ -266,7 +266,7 @@ header {
     justify-content: center;
     align-items: center;
     position: absolute;
-    left: calc( 50% - 5%);
+    left: calc( 50%);
     top: -35px;
     transform: translateX(-50%) rotate(45deg);
 }
@@ -299,11 +299,11 @@ header {
 }
 
 .fa-quote-right {
-    left: 0;
+    right: 0;
 }
 
 .fa-quote-left {
-    right: 0;
+    left: 0;
 }
 
 .testimonial {
@@ -313,7 +313,7 @@ header {
 .progress-bar {
     width: 100%;
     height: 4px;
-    background-color: tomato;
+    background-color: tomato !important;
     transform-origin: left;
     animation-name: myincrement;
     animation-duration: 10s;
@@ -325,10 +325,13 @@ header {
     0% {
         transform: scaleX(0);
     }
-    100% {
-        transform: scaleX(1);
-    }
 }
 
 
 /*End Testimonial   */
+
+
+/* Start ADV Box Section */
+
+
+/*End ADV Box Section */
