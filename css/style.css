@@ -335,3 +335,261 @@ header {
 
 
 /*End ADV Box Section */
+
+
+/* Start  ADV Text Section*/
+
+.adv-container {
+    height: 400px;
+    background-image: url("./../assets/img/banner/banner11.jpg");
+    background-size: cover;
+    position: relative;
+}
+
+.advtext {
+    font-family: sans-serif;
+    width: 50%;
+    background-color: #fff;
+    color: #000;
+    font-size: 5vw;
+    font-weight: bold;
+    text-align: center;
+    padding: 5px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    mix-blend-mode: screen;
+}
+
+.adv-container:hover {
+    animation: myadvani 3s infinite linear alternate;
+}
+
+@keyframes myadvani {
+    0% {
+        background-image: url("./../assets/img/banner/banner11.jpg");
+    }
+    50% {
+        background-image: url("./../assets/img/banner/banner10.jpg");
+    }
+    100% {
+        background-image: url("./../assets/img/banner/banner12.jpg");
+    }
+}
+
+
+/* End  ADV Text Section */
+
+
+/* Start Staff Section  */
+
+.cards {
+    width: 300px !important;
+    /* box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3); */
+    text-align: center;
+    margin: auto;
+    padding: 0%;
+    /*for remove padding in cards, cuz of row */
+}
+
+.cards img {
+    width: 100%;
+}
+
+.title {
+    font-size: 18px;
+    color: grey;
+}
+
+.cards a {
+    text-decoration: none;
+    color: #000;
+    font-size: 22px;
+}
+
+.cards button {
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    outline: 0;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.cards button:hover {
+    opacity: 50%;
+}
+
+
+/* End Staff Section  */
+
+
+/* Start Property Section */
+
+.propertylists {
+    color: #777;
+    user-select: none;
+    cursor: pointer;
+}
+
+.activeitems {
+    color: #000;
+}
+
+.filters {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+
+/* End Property Section  */
+
+
+/* Start Content Section */
+
+.tabcontents {
+    color: #fff;
+    padding: 10%;
+    text-align: center;
+}
+
+#phone {
+    background-color: gray;
+}
+
+#social {
+    background-color: slateblue;
+}
+
+#website {
+    background-color: slategray;
+}
+
+#address {
+    background-color: steelblue;
+}
+
+.btn-tabs {
+    width: 25%;
+    background-color: #444;
+    color: #fff;
+    border: none;
+    outline: none;
+    padding: 15px 20px;
+    cursor: pointer;
+    float: left;
+}
+
+.btn-tabs:hover {
+    background-color: #888;
+}
+
+
+/* End Content Section  */
+
+
+/* Start Chat Box  */
+
+.chat-btn {
+    width: 50px;
+    height: 50px;
+    background-color: #555;
+    color: #fff;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    padding: 20px;
+    cursor: pointer;
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.8;
+}
+
+.chat-popup {
+    background-color: #fff;
+    border: 2px solid #f3f3f3;
+    position: fixed;
+    right: 15px;
+    bottom: 0px;
+    z-index: 10;
+    display: none;
+}
+
+.chat-container {
+    max-width: 300px;
+    padding: 10px;
+}
+
+.messages {
+    overflow-y: scroll;
+}
+
+.form-container textarea {
+    width: 100%;
+    background-color: #f2f2f2;
+    border: none;
+    outline: none;
+    margin: 5px auto;
+    resize: none;
+}
+
+.form-container textarea:focus {
+    background-color: #ddd;
+}
+
+.form-container .btns {
+    width: 100%;
+    background-color: steelblue;
+    color: #fff;
+    border: none;
+    outline: none;
+    margin-bottom: 10px;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.form-container .btns:nth-of-type(2) {
+    background-color: red;
+}
+
+.form-container .btns:hover,
+.chat-btn:hover {
+    opacity: 1;
+}
+
+.admin {
+    background-color: #aaa;
+}
+
+.user {
+    background-color: #ddd;
+}
+
+.containers {
+    padding: 15px;
+    position: relative;
+}
+
+.time-left {
+    color: #777;
+}
+
+.time-right {
+    color: #777;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+
+/* End Chat Box  */
